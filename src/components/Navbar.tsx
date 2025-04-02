@@ -17,18 +17,39 @@ export default function Navbar({ isHidden, setIsHidden }: navbarProps) {
     <div
       className={`${
         isHidden ? "block" : "hidden" //quando o botão menu está escondido, o navbar está visível
-      } h-screen bg-gradient-to-r from-[#aabec288] to-[#edede788]
-      w-1/2 md:block md:h-0  `}
+      } h-screen bg-gradient-to-r from-[#aabec2] via-[#edede7] to-[#edede771]
+      w-1/2 md:block md:h-0 fixed`}
     >
       {/* quando o botão é clicado, esconde o navbar novamente */}
       <Button variant="ghost" size="icon" onClick={handleClick}>
         <ChevronLeft className="m-2 md:hidden" />
       </Button>
-      <ul className=" px-4 md:flex gap-4 md:absolute top-0 right-0">
-        <li>Seção 1</li>
-        <li>Seção 2</li>
-        <li>Seção 3</li>
-        <li>Seção 4</li>
+      <ul className=" px-4 flex flex-col md:flex-row gap-4 md:absolute top-0 left-0 md:gap-6">
+        <li>
+          <a href="#heroSection" onClick={handleClick}>
+            Início
+          </a>
+        </li>
+        <li>
+          <a href="#about" onClick={handleClick}>
+            Sobre
+          </a>
+        </li>
+        <li>
+          <a href="#services" onClick={handleClick}>
+            Serviços
+          </a>
+        </li>
+        <li>
+          <a href="#testimonials" onClick={handleClick}>
+            Depoimentos
+          </a>
+        </li>
+        <li>
+          <a href="#contact" onClick={handleClick}>
+            Contatos
+          </a>
+        </li>
       </ul>
     </div>
   );

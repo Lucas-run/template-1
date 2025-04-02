@@ -12,7 +12,7 @@ export default function Header() {
     setIsHidden(!isHidden);
   }
   return (
-    <header className="w-full h-10  bg-gradient-to-r from-[#aabec2] to-[#edede7]">
+    <header className="w-full h-10  bg-gradient-to-r from-[#aabec2] to-[#edede7] fixed  ">
       <Button
         variant="ghost"
         size="icon"
